@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:title="Service"
+                        android:defaultValue="true"
+                        android:summary="Tap the checkbox to disable the like service"
+                        android:key="service" />
+
+    <CheckBoxPreference android:title="Notification"
+                        android:defaultValue="true"
+                        android:summary="Notification when profiles are liked"
+                        android:key="notification" />
+
+
+
+</PreferenceScreen>

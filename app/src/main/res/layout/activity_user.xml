@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context="com.faraz.autoliker.UserActivity">
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_gravity="center"
+              android:textSize="20sp"
+              android:visibility="gone"
+              android:layout_height="wrap_content"
+    android:id="@+id/matched"
+    android:textStyle="italic"
+    android:text="Congratulations ! you both mathced"/>
+
+
+    <com.synnapps.carouselview.CarouselView
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:id="@+id/carouselView"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        app:fillColor="#FFFFFFFF"
+        app:pageColor="#00000000"
+        app:autoPlay="false"
+        app:radius="6dp"
+        app:strokeColor="#FF777777"
+        app:strokeWidth="1dp"/>
+
+
+
+    <TextView android:layout_width="match_parent"
+              android:background="@color/half_black"
+              android:id="@+id/bio"
+              android:textIsSelectable="true"
+              android:textColor="#FFFFFF"
+              android:layout_height="wrap_content"/>
+
+</LinearLayout>

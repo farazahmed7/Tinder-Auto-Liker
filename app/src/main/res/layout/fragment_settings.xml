@@ -1,0 +1,185 @@
+<ScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:id="@+id/cards"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_margin="16dp"
+              tools:context="com.faraz.autoliker.SettingsFragment">
+
+
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:clickable="true"
+        app:cardUseCompatPadding="true"
+        android:layout_height="100dp"
+        android:layout_marginBottom="15dp"
+        android:foreground="?android:attr/selectableItemBackground"
+    >
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:textStyle="bold"
+                      android:textSize="20sp"
+                      android:id="@+id/inAppText"
+                      android:text="Number of in-app likes "/>
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                  android:id="@+id/inAppview"
+                  android:background="@color/half_black"
+                  android:layout_below="@+id/inAppText"/>
+
+            <org.angmarch.views.NiceSpinner
+                android:hint="Number of hours"
+                android:layout_below="@+id/inAppview"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:id="@+id/inapp_like_spinner"
+                android:layout_width="match_parent"
+                android:background="@drawable/selected"
+                android:layout_height="wrap_content"
+            />
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:clickable="true"
+        android:layout_height="40dp"
+        app:cardUseCompatPadding="true"
+        android:foreground="?android:attr/selectableItemBackground"
+    >
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="15sp"
+                  android:layout_centerVertical="true"
+                  android:textStyle="bold"
+        android:text="Background service"/>
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/onoff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_alignParentRight="true"
+
+            android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <net.cachapa.expandablelayout.ExpandableLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+    android:id="@+id/expand">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:clickable="true"
+        app:cardUseCompatPadding="true"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:foreground="?android:attr/selectableItemBackground"
+    >
+        <LinearLayout android:layout_width="wrap_content"
+                      android:orientation="vertical"
+                      android:layout_height="wrap_content">
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textStyle="bold"
+              android:textSize="20sp"
+              android:text="Number of likes for background service"/>
+
+            <View android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="@color/half_black"/>
+
+    <org.angmarch.views.NiceSpinner
+        android:hint="Number of hours"
+        android:id="@+id/bg_like_spinner"
+        android:layout_width="match_parent"
+        android:background="@drawable/selected"
+        android:layout_height="wrap_content"
+    />
+
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+    android:text="Number of likes also depends on availibality of profiles within your selected location radius in Tinder's Settings"/>
+
+<EditText android:layout_width="150dp" android:layout_height="wrap_content"
+android:id="@+id/sec"/>
+
+    <View android:layout_width="match_parent"
+          android:background="@color/half_black"
+          android:layout_height="1dp"/>
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textStyle="bold"
+              android:textSize="20sp"
+    android:text="Likes Evey"/>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_margin="16dp"
+                  android:background="@drawable/selected"
+                  android:layout_height="wrap_content">
+    <org.angmarch.views.NiceSpinner
+        android:hint="Number of hours"
+        android:id="@+id/nice_spinner"
+        android:layout_width="match_parent"
+        android:background="@drawable/selected"
+        android:layout_height="wrap_content"
+       />
+    </LinearLayout>
+
+
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="set"
+    android:id="@+id/set"/>
+
+
+    <View android:layout_width="match_parent"
+          android:background="#807070"
+          android:layout_height="1dp"/>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    </net.cachapa.expandablelayout.ExpandableLayout>
+
+
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="Log Out"
+            android:id="@+id/log_out"/>
+
+
+</LinearLayout>
+
+</ScrollView>

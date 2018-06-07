@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.faraz.autoliker"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDboS8FBTJqu5XMSu46DPyteJHpgPSpUUU"/>
+
+        <activity android:name=".FBLoginActivity">
+        </activity>
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".AutoLikeActivity">
+        </activity>
+        <activity android:name=".MainFragmentActivity">
+        </activity>
+        <activity android:name=".UserActivity">
+        </activity>
+
+        <service
+            android:name=".LikerService"
+            android:exported="true"
+            android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".LikeReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote">
+        </receiver>
+
+        <activity android:name=".TestActivity">
+        </activity>
+        <activity android:name=".Preference">
+        </activity>
+        <activity android:name=".LikeActivity">
+        </activity>
+        <activity android:name=".NotificationResultActivity">
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings">
+        </activity>
+    </application>
+
+</manifest>
